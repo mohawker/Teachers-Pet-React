@@ -36,14 +36,27 @@ const styles = {
 
 function UserProfile(props) {
   const { classes } = props;
+  function getRandomColor() {
+    var hue = 'rgba(' + (Math.floor(Math.random() * 70)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 50)) + ',' + (1-(Math.random())*0.2) + ')';
+    return hue;
+  }
   return (
     <div>
-      <div>
-        <div style={{height: '92px', width: '100px', background: 'green', color: 'white', textAlign:'center', verticalAlign: 'end', position: 'relative', borderRadius: '20%'}}>
-          <div style={{position: 'absolute', bottom: '9px'}}>Jeremy Hampers</div>
+      <div class="studentRow">
+        <div style={{marginLeft: '50px',filter: 'drop-shadow(0px 7px 1px black)'}}>
+          <div style={{float:'left', marginRight:'2px', marginTop: '14px', height: '63px', width: '73px', background: getRandomColor(), color: 'white', textAlign:'center', verticalAlign: 'end', position: 'relative', borderRadius: '7%'}}>
+            {/* <img style={{position:'absolute', right:'21px', top:'-20px', borderRadius:'50%', width:'55px'}} src={require('../../assets/img/student1.jpg')}></img> */}
+            <div style={{textAlign: 'center', verticalAlign:'middle', marginTop: '20px',fontSize:'13px'}}>Er Jun Jia</div>
+          </div>
+          
+
+
+
         </div>
+        
+
+        <br/>
       </div>
-      
 
     </div>
   );
